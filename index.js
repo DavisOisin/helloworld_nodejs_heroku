@@ -13,7 +13,7 @@ var server = http.createServer(function (req, res)
         //res.write("<p> port: " + port + "</p>", 'utf-8');
         //close
         res.end();
- 
+
     });
 //set server to listen on heroku port found through env
 server.listen(port, () => {console.log(`Server listening on port ${port}.`)});
