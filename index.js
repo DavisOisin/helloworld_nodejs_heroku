@@ -10,10 +10,10 @@ var server = http.createServer(function (req, res)
             'Content-Type': 'text/html'
         });
         res.write('<h1 style="color: red;">Hello World!!!!!!!!! - Oisin</h1>', 'utf-8');
-        res.write("<p> port: " + port + "</p>", 'utf-8');
+        //res.write("<p> port: " + port + "</p>", 'utf-8');
         //close
         res.end();
  
     });
 //set server to listen on heroku port found through env
-server.listen(port)
+server.listen(port, () => console.log(`Server is listening on port ${port}...`));
